@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2837ab-6a31-40f2-8a70-73d91076ba88" name="Changes" comment="new output">
+    <list default="true" id="ad2837ab-6a31-40f2-8a70-73d91076ba88" name="Changes" comment="Отчёт.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptLab1MalkovIS2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptLab1MalkovIS2.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +54,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\malko\Documents\git\lab1JavaScript" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -73,8 +78,26 @@
       <workItem from="1728101024330" duration="8577000" />
       <workItem from="1728148797981" duration="2860000" />
       <workItem from="1728152085119" duration="2948000" />
-      <workItem from="1728186080629" duration="3084000" />
+      <workItem from="1728186080629" duration="3762000" />
+      <workItem from="1728195772590" duration="1000000" />
     </task>
+    <task id="LOCAL-00001" summary="Добавлена проверка на идиота.">
+      <option name="closed" value="true" />
+      <created>1728189390995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728189390995</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Отчёт.">
+      <option name="closed" value="true" />
+      <created>1728189628278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728189628278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,7 +108,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -93,6 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new output" />
-    <option name="LAST_COMMIT_MESSAGE" value="new output" />
+    <MESSAGE value="Добавлена проверка на идиота." />
+    <MESSAGE value="Отчёт." />
+    <option name="LAST_COMMIT_MESSAGE" value="Отчёт." />
   </component>
 </project>
