@@ -23,7 +23,7 @@ public class Main {
     }
 
     public Boolean is2Digits (int x) {
-        return abs(x) > 9;
+        return abs(x) > 9 && abs(x) < 180;
     }
 
     public Boolean isInRange (int a, int b, int num) {
@@ -46,19 +46,19 @@ public class Main {
 
     public int sum2 (int x, int y) {
         int sum = x + y;
-        return sum > 10 && sum <= 19 ? 20 : sum;
+        return sum > 10 && sum < 19 ? 20 : sum;
     }
 
     public String day(int x) {
         return switch (x) {
-            case 1 -> "Понедельник";
-            case 2 -> "Вторник";
-            case 3 -> "Среда";
-            case 4 -> "Четверг";
-            case 5 -> "Пятница";
-            case 6 -> "Суббота";
-            case 7 -> "Воскресенье";
-            default -> "Это не день недели";
+            case 1 -> "понедельник";
+            case 2 -> "вторник";
+            case 3 -> "среда";
+            case 4 -> "четверг";
+            case 5 -> "пятница";
+            case 6 -> "суббота";
+            case 7 -> "воскресенье";
+            default -> "это не день недели";
         };
     }
 
@@ -122,10 +122,14 @@ public class Main {
 
     public int maxAbs (int[] arr) {
         int max = 0;
+        int result = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (abs(arr[i]) > max) max = abs(arr[i]);
+            if (abs(arr[i]) > max) {
+                max = abs(arr[i]);
+                result = arr[i];
+            };
         }
-        return max;
+        return result;
     }
 
     public int[] add(int[] arr, int[] ins, int pos) {
@@ -166,12 +170,14 @@ public class Main {
             if (arr[i] == x) {
                 preResult[i] = i;
                 resultLength++;
-            };
+            } else {
+                preResult[i] = -1;
+            }
         }
         int[] result = new int[resultLength];
         int j = 0;
         for (int i = 0; i < preResult.length; i++) {
-            if (preResult[i] != 0) {
+            if (preResult[i] != -1) {
                 result[j] = preResult[i];
                 j++;
             }
@@ -240,9 +246,9 @@ public class Main {
                 int b = scanner.nextInt();
                 System.out.print("Enter num: ");
                 int num = scanner.nextInt();
-                System.out.println("Are all equal: " + main.isInRange(a, b, num));
+                System.out.println("Is in range: " + main.isInRange(a, b, num));
 
-                System.out.println("\nEnter a number to test task 9: ");
+                System.out.println("\nEnter 3 numbers to test task 9: ");
                 System.out.print("Enter a: ");
                 int a2 = scanner.nextInt();
                 System.out.print("Enter b: ");
@@ -308,8 +314,15 @@ public class Main {
                 break;
             case 4:
                 System.out.println("\nEnter an array to test task 1: ");
-                int[] arr3 = new int[scanner.nextInt()];
+                System.out.print("Enter array length: ");
+                int length3 = scanner.nextInt();
+                while (length3 <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    length3 = scanner.nextInt();
+                }
+                int[] arr3 = new int[length3];
                 for (int p = 0; p < arr3.length; p++) {
+                    System.out.print("Enter array value: ");
                     arr3[p] = scanner.nextInt();
                 }
                 System.out.println("\nEnter x");
@@ -318,22 +331,40 @@ public class Main {
 
                 System.out.println("\nEnter an array to test task 3: ");
                 System.out.print("Enter array length: ");
-                int[] arr4 = new int[scanner.nextInt()];
+                int length4 = scanner.nextInt();
+                while (length4 <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    length4 = scanner.nextInt();
+                }
+                int[] arr4 = new int[length4];
                 for (int p = 0; p < arr4.length; p++) {
+                    System.out.print("Enter array value: ");
                     arr4[p] = scanner.nextInt();
                 }
                 System.out.println("Max abs: " + main.maxAbs(arr4));
 
                 System.out.println("\nEnter an array to test task 5: ");
                 System.out.print("Enter array length: ");
-                int[] arr5 = new int[scanner.nextInt()];
+                int length5 = scanner.nextInt();
+                while (length5 <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    length5 = scanner.nextInt();
+                }
+                int[] arr5 = new int[length5];
                 for (int p = 0; p < arr5.length; p++) {
+                    System.out.print("Enter array value: ");
                     arr5[p] = scanner.nextInt();
                 }
                 System.out.println("Enter an array to insert");
                 System.out.print("Enter array length: ");
-                int[] ins = new int[scanner.nextInt()];
+                int lengthIns = scanner.nextInt();
+                while (lengthIns <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    lengthIns = scanner.nextInt();
+                }
+                int[] ins = new int[lengthIns];
                 for (int p = 0; p < ins.length; p++) {
+                    System.out.print("Enter array value: ");
                     ins[p] = scanner.nextInt();
                 }
                 System.out.println("Enter pos: ");
@@ -343,16 +374,28 @@ public class Main {
 
                 System.out.println("\nEnter an array to test task 7: ");
                 System.out.print("Enter array length: ");
-                int[] arr6 = new int[scanner.nextInt()];
+                int length6 = scanner.nextInt();
+                while (length6 <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    length6 = scanner.nextInt();
+                }
+                int[] arr6 = new int[length6];
                 for (int p = 0; p < arr6.length; p++) {
+                    System.out.print("Enter array value: ");
                     arr6[p] = scanner.nextInt();
                 }
                 main.arrayPrint(main.reverseBack(arr6));
 
                 System.out.println("\nEnter an array to test task 9: ");
                 System.out.print("Enter array length: ");
-                int[] arr7 = new int[scanner.nextInt()];
+                int length7 = scanner.nextInt();
+                while (length7 <= 0) {
+                    System.out.println("Array length must be positive. Please enter a positive value: ");
+                    length7 = scanner.nextInt();
+                }
+                int[] arr7 = new int[length7];
                 for (int p = 0; p < arr7.length; p++) {
+                    System.out.print("Enter array value: ");
                     arr7[p] = scanner.nextInt();
                 }
                 System.out.println("Enter x");
